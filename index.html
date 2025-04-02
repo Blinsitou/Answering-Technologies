@@ -26,6 +26,8 @@
 <script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript" src="js/gradient.js"></script>
 <script type="text/javascript" src="js/imageService.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript" src="js/contactForm.js"></script>
 
 </head>
 <body>
@@ -412,7 +414,7 @@
                 	<span>(+57) 1 4661622</span>
                 </div>
                 <div class="contact-info-box email clearfix">
-                	<h3><i class="fa fa-pencil"></i>email:</h3>
+                	<h3><i class="fa fa-envelope"></i>Email:</h3>
                 	<span>contactenos@answering.com.co</span>
                 </div>
             	<div class="contact-info-box hours clearfix">
@@ -420,7 +422,7 @@
                 	<span><strong>Lunes a Viernes:</strong> 8am - 5pm</span>
                 </div>
                 <div class="contact-info-box hours clearfix">
-                	<h3><i class="fa fa-clock-o"></i>Dirección:</h3>
+                	<h3><i class="fa fa-location-arrow"></i>Dirección:</h3>
                 	<span>Carrera 13 # 37 -37 piso 5</span>
                 </div>
                 <ul class="social-link">
@@ -434,9 +436,9 @@
         	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
             	<div class="form">
                 	
-                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="sendmessage"></div>
                     <div id="errormessage"></div>
-                    <form action="sendForm.php" method="post" role="form" class="contactForm" >
+                    <form class="contactForm">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control input-text" id="name" placeholder="Tu nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
                             <div class="validation"></div>
@@ -453,7 +455,7 @@
                             <textarea class="form-control input-text text-area" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Tu mensaje"></textarea>
                             <div class="validation"></div>
                         </div>
-                        <p style="color:#ccc">Gracias por contactarnos, estaremos enviando un mensaje a tu e-mail.</p>
+                        <p style="color:#ccc; margin-bottom: 20px;">Gracias por contactarnos, estaremos enviando un mensaje a tu e-mail.</p>
                         <div class="text-center"><button type="submit" class="input-btn">Enviar mensaje</button></div>
                     </form>
                 </div>	
