@@ -278,7 +278,7 @@ color: #fff;
 
 .service-list-col1 i {
     font-size: 40px;
-    color: #21a52c;
+    color: #6b6b6b;
     margin-bottom: 15px;
     display: block;
 }
@@ -287,7 +287,7 @@ color: #fff;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
-    height: 450px;
+    height: 280px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
@@ -330,7 +330,7 @@ color: #fff;
 }
 
 .service-content {
-    max-height: 200px;
+    max-height: 80px;
     overflow: hidden;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
@@ -350,13 +350,11 @@ color: #fff;
 }
 
 .more-content {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    margin-top: 10px;
+    display: none;
 }
 
 .service-list:hover .more-content {
-    opacity: 1;
+    display: block;
 }
 
 .about-card {
@@ -528,6 +526,7 @@ color: #fff;
 	float:left;
 	padding:0;
 }
+
 .Portfolio-box img{
 	margin-bottom:25px;
 	transition:all 0.3s ease-in-out;
@@ -577,6 +576,7 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
+	margin-bottom: 260px;
 	background:url(../img/bogota-op.png) center center no-repeat;
 	background-size:cover;
 	padding:80px 0;
