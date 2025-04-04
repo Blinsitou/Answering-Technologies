@@ -294,6 +294,7 @@ color: #fff;
     align-items: center;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .service-list-col2 {
@@ -328,6 +329,14 @@ color: #fff;
     font-weight: 600;
 }
 
+.service-content {
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    flex: 1;
+}
+
 .service-list:hover {
     height: auto;
     min-height: 450px;
@@ -335,21 +344,15 @@ color: #fff;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.service-content {
-    max-height: 200px;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 1;
-}
-
 .service-list:hover .service-content {
-    max-height: 1000px;
+    max-height: none;
     opacity: 1;
 }
 
 .more-content {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    margin-top: 10px;
 }
 
 .service-list:hover .more-content {
