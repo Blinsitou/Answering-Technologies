@@ -288,11 +288,7 @@ color: #fff;
     padding: 20px;
     border-radius: 10px;
     height: 280px;
-<<<<<<< HEAD
-    transition: height 0.5s ease-in-out;
-=======
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
->>>>>>> 483e540bd197ab7b83382e3d77ea9ad1add4cf9c
+    transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,7 +330,7 @@ color: #fff;
 }
 
 .service-content {
-    max-height: 80px;
+    max-height: 120px;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
     opacity: 1;
@@ -344,27 +340,29 @@ color: #fff;
 
 .service-list:hover {
     height: auto;
-    min-height: 280px;
+    min-height: 500px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .service-list:hover .service-content {
-    max-height: 1000px;
-    opacity: 1;
+    max-height: 300px;
 }
 
 .more-content {
-<<<<<<< HEAD
-    display: block;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-=======
     display: none;
->>>>>>> 483e540bd197ab7b83382e3d77ea9ad1add4cf9c
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
 }
 
 .service-list:hover .more-content {
     display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .about-card {
@@ -1133,5 +1131,47 @@ border: 2px solid #7cc576;
     margin: 0 auto 15px;
     width: 50%;
     border-color: #1d7cbf;
+}
+
+#imgService {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: none;
+}
+
+#imgService:hover {
+    transform: scale(1.05);
+}
+
+.service-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.service-list:hover .service-image {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .service-list {
+        height: auto;
+        min-height: 450px;
+    }
+    
+    .service-content {
+        max-height: none;
+    }
+    
+    .more-content {
+        display: block;
+    }
 }
 
