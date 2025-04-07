@@ -288,7 +288,11 @@ color: #fff;
     padding: 20px;
     border-radius: 10px;
     height: 280px;
+<<<<<<< HEAD
     transition: height 0.5s ease-in-out;
+=======
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+>>>>>>> 483e540bd197ab7b83382e3d77ea9ad1add4cf9c
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,13 +354,17 @@ color: #fff;
 }
 
 .more-content {
+<<<<<<< HEAD
     display: block;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+=======
+    display: none;
+>>>>>>> 483e540bd197ab7b83382e3d77ea9ad1add4cf9c
 }
 
 .service-list:hover .more-content {
-    opacity: 1;
+    display: block;
 }
 
 .about-card {
