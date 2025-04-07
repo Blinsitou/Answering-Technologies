@@ -288,7 +288,7 @@ color: #fff;
     padding: 20px;
     border-radius: 10px;
     height: 280px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: height 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -332,29 +332,31 @@ color: #fff;
 .service-content {
     max-height: 80px;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.5s ease-in-out;
     opacity: 1;
     flex: 1;
+    width: 100%;
 }
 
 .service-list:hover {
     height: auto;
-    min-height: 450px;
-    transform: translateY(-5px);
+    min-height: 280px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .service-list:hover .service-content {
-    max-height: none;
+    max-height: 1000px;
     opacity: 1;
 }
 
 .more-content {
-    display: none;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .service-list:hover .more-content {
-    display: block;
+    opacity: 1;
 }
 
 .about-card {
@@ -1117,10 +1119,6 @@ border: 2px solid #7cc576;
     z-index: -1;
     object-fit: cover;
     transform-origin: center center;
-}
-
-.more-content {
-    display: none;
 }
 
 .service-list-col2 hr {
