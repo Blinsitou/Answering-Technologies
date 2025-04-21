@@ -586,9 +586,12 @@ img {
 .client-part{
 	margin-bottom: 260px;
 	background:url(../img/bogota-op.png) center center no-repeat;
-	background-size:cover;
+	background-size: cover;
 	padding:80px 0;
 	text-align:center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .client-part-haead{
 	color:#fdfdfd;
@@ -647,15 +650,15 @@ img {
 }
 .quote-right{
 	font-style:normal;
-	width: 80px;
-    height: 80px;
+	width: 100px;
+	height: 100px;
 	margin:0 auto;
 	border:2px solid white;
 	border-radius:50%;
-	display:block;
-	line-height:95px;
-	text-align:center;
-	font-size:27px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size:36px;
 	color:white;
 	cursor: pointer;
 	transition:all 0.3s ease-in-out;
