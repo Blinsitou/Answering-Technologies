@@ -33,7 +33,9 @@
 	.form{ margin:0;}
 	.contact-info-box{ margin:0 ;}
 	.social-link{ margin:0;}
-	
+	.service-list {height: auto; min-height: 450px;}
+    .service-content {max-height: none;}
+    .more-content {display: block;}
 	.main-nav{ display:block !important; }
 	.main-nav li a{ padding:8px 15px}
 	/*.portfolioContainer{ width:750px; margin:0px auto !important; }
@@ -102,4 +104,19 @@
 	.Portfolio-box img { max-width:100%;}
 	.portfolioContainer{ width:280px !important; margin:0 auto !important } 
 	
+}
+
+@media (max-width: 768px) {
+    .service-list {
+        height: auto;
+        min-height: 450px;
+    }
+    
+    .service-content {
+        max-height: none;
+    }
+    
+    .more-content {
+        display: block;
+    }
 }

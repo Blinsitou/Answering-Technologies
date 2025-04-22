@@ -322,6 +322,8 @@ color: #fff;
 .service-list-col2 p {
     margin-bottom: 15px;
     line-height: 1.5;
+	letter-spacing: 0,5px;
+	line-height: 1,6px;
 }
 
 .service-list-col2 p strong {
@@ -1161,20 +1163,5 @@ border: 2px solid #7cc576;
 
 .service-list:hover .service-image {
     opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .service-list {
-        height: auto;
-        min-height: 450px;
-    }
-    
-    .service-content {
-        max-height: none;
-    }
-    
-    .more-content {
-        display: block;
-    }
 }
 
