@@ -320,6 +320,10 @@ color: #fff;
 }
 
 .service-list-col2 p {
+	hyphenate-limit-chars: 7;
+	hyphens: auto;
+	text-align: justify;
+	text-wrap: pretty;
     margin-bottom: 15px;
     line-height: 1.5;
 	letter-spacing: 0,5px;
@@ -327,6 +331,10 @@ color: #fff;
 }
 
 .service-list-col2 p strong {
+	hyphenate-limit-chars: 7;
+	hyphens: auto;
+	text-align: justify;
+	text-wrap: pretty;
     color: #292d30;
     font-weight: 600;
 }

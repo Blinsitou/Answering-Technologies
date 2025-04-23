@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         notification.classList.add('show');
         setTimeout(() => {
             notification.classList.remove('show');
-        }, 3000); // La notificación desaparecerá después de 3 segundos
+        }, 3000);
     }
 
     // Validar que el servicio esté disponible
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const phone = document.getElementById('phone').value.trim();
         const message = document.querySelector('textarea[name="message"]').value.trim();
 
-        // Validación más detallada
+        // Validación
         if (!name) {
             errorMessage.textContent = 'Por favor, ingrese su nombre';
             return;
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sendMessage.textContent = '';
             form.reset();
             errorMessage.textContent = '';
-            showNotification(); // Mostrar notificación de éxito
+            showNotification();
         }, function(error) {
             console.error('Error completo:', error);
             errorMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor, intente nuevamente.';
