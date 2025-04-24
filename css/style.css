@@ -95,8 +95,13 @@ p{
 	text-align:center;
 	background:url(../img/back2.jpg);
 	background-size: cover;
-	padding:50px 0;
-	max-height: 100%;
+	background-position: center;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
 	transition: 1s;
 	-moz-transition:all 1s ease-in-out;
 	-webkit-transition:all 1s ease-in-out;
@@ -110,6 +115,11 @@ p{
 	width: 100%; 
 	height: 100%; 
     content: '';
+}
+.header .container {
+	width: 100%;
+	z-index: 1;
+	position: relative;
 }
 .logo{
 	width:500px;
@@ -261,6 +271,14 @@ color: #fff;
 
 .small-logo a{
 	margin: 10px 0 !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.small-logo a img {
+	max-height: 50px;
+	width: auto;
 }
 
 .main-section{
@@ -348,14 +366,35 @@ color: #fff;
     width: 100%;
 }
 
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.row > [class*="col-"] > .service-list {
+    flex: 1;
+}
+
 .service-list:hover {
     height: auto;
     min-height: 500px;
+    max-height: none;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow-y: visible;
 }
 
 .service-list:hover .service-content {
-    max-height: 300px;
+    max-height: 1000px;
+    overflow: visible;
 }
 
 .more-content {

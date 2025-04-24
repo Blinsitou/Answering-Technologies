@@ -10,6 +10,7 @@
 	.c-logo-part ul li{ margin:0 15px;}
 	.form{ margin:0 0 0 20px}
 	.main-nav{ display:block !important; }
+	.main-nav li a { margin: 17px 15px; }
 	/*.portfolioContainer{ width:800px; margin:0px auto !important; } */ 
 	
 }	
@@ -19,12 +20,67 @@
 	body{ font-size:13px;}
 	p{ line-height:20px ;}
 	.header h1{ font-size:46px;}
-	.main-nav ul li a{ padding:14px;}
-	.small-logo{ padding:0 20px;}
+	.main-nav{ width: 100%; display: flex; justify-content: center; flex-wrap: nowrap; }
+	.main-nav li{ margin: 0; }
+	.main-nav li a{ padding: 8px; margin: 17px 10px; font-size: 12px; }
+	.small-logo{ padding: 0 10px; }
+	.small-logo img{ max-width: 80%; }
 	h2{ font-size:30px}
 	h6{ font-size:16px;}
 	h3{ font-size:15px;}
-	.service-list{ margin-bottom:20px; font-size:15px;}
+	
+	/* Corrección específica para el grid de Bootstrap en iPad */
+	.container .row {
+		margin-left: -15px;
+		margin-right: -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.container .row:before,
+	.container .row:after {
+		display: none;
+	}
+	
+	.container .row > [class*="col-"] {
+		display: flex;
+		flex-direction: column;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.service-list{ 
+		margin-bottom: 20px; 
+		font-size: 15px;
+		height: 350px !important;
+		min-height: unset !important;
+		overflow: hidden;
+		flex: 1;
+	}
+	.service-list:hover {
+		height: 500px !important;
+		min-height: unset !important;
+	}
+	.service-list .service-content {
+		max-height: 120px !important;
+		overflow: hidden;
+	}
+	.service-list:hover .service-content {
+		max-height: 250px !important;
+	}
+	.more-content {
+		display: none !important;
+	}
+	.service-list:hover .more-content {
+		display: block !important;
+	}
+	.service-image {
+		margin-top: 5px;
+	}
+	#imgService {
+		width: 200px;
+		height: 150px;
+	}
 	.featured-work p.padding-b{ padding-bottom:15px;}
 	.main-section{ padding:70px 0;}
 	.c-logo-part ul li{ margin:0 1%; float:left; width:18%;}
@@ -33,16 +89,9 @@
 	.form{ margin:0;}
 	.contact-info-box{ margin:0 ;}
 	.social-link{ margin:0;}
-	.service-list {height: auto; min-height: 450px;}
-    .service-content {max-height: none;}
-    .more-content {display: block;}
-	.main-nav{ display:block !important; }
-	.main-nav li a{ padding:8px 15px}
+	.main-nav li a{ padding:8px 10px; margin: 17px 5px; }
 	/*.portfolioContainer{ width:750px; margin:0px auto !important; }
 	.Portfolio-box{ height:250px;}*/
-	
-	 
-	
 }
 
 @media only screen and (max-width: 767px) {
@@ -55,12 +104,13 @@
 	.service-list{ font-size:12px; margin-bottom:20px;}
 	.we-create li{ font-size:13px; padding:0 0 0 8px;}
 	.header h1{ font-size:28px;}
-	.header{ padding:60px 0;}
+	.header{ padding:0; height:100vh; display:flex; align-items:center; }
 	.main-section{ padding:60px 0 70px;}
-	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; float: none; background:#fff;}
-	.main-nav li{ display:block;}
+	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; float: none; background:#fff; z-index: 1000; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+	.main-nav li{ display:block; margin: 0; border-bottom: 1px solid #f1f1f1; }
+	.main-nav li:last-child { border-bottom: none; }
 	.main-nav li.small-logo{ display:none;}
-	.main-nav li a{ display:block; padding:7px 32px; border-bottom:none;}
+	.main-nav li a{ display:block; padding:12px 32px; border-bottom:none; text-align: center; }
 	.main-nav li a:hover{color:#7cc576}
 	.team-leader-box{ max-width:307px; width:auto; float:none; margin:0 auto;	}
 	.team-leader-box:nth-of-type(3n){ margin:0 auto}
@@ -108,15 +158,32 @@
 
 @media (max-width: 768px) {
     .service-list {
-        height: auto;
-        min-height: 450px;
+        height: 350px;
+        min-height: unset;
     }
     
     .service-content {
-        max-height: none;
+        max-height: 120px;
+        overflow: hidden;
     }
     
     .more-content {
+        display: none;
+    }
+    
+    .service-list:hover .more-content {
         display: block;
+    }
+    
+    /* Asegurar que las filas se alineen correctamente */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    /* Hacer que cada columna en la fila tenga la misma altura */
+    .row:before,
+    .row:after {
+        display: none;
     }
 }
