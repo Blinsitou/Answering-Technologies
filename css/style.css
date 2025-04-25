@@ -67,9 +67,10 @@ h2{
 h3{
 	font-family: 'Montserrat', sans-serif;
 	color:#222222;
-	font-size:16px;
+	font-size:25px;
 	margin:0 0 5px 0;
-	font-weight:400;
+	font-weight: 500;
+	
 }
 h6{
 	font-size:16px;
@@ -306,7 +307,7 @@ color: #fff;
     padding: 20px;
     border-radius: 10px;
     height: 280px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -323,6 +324,7 @@ color: #fff;
 }
 
 .service-list-col2 h3 {
+	font-weight: bold;
     margin-top: 0;
     text-align: center;
     margin-bottom: 15px;
@@ -330,6 +332,7 @@ color: #fff;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    order: 1;
 }
 
 .service-list-col2 h3 span {
@@ -357,15 +360,24 @@ color: #fff;
     font-weight: 600;
 }
 
+.service-image {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 15px 0;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    order: 2;
+}
+
 .service-content {
     max-height: 120px;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     opacity: 1;
     flex: 1;
     width: 100%;
+    order: 3;
 }
-
 
 .row {
     display: flex;
@@ -385,9 +397,7 @@ color: #fff;
 }
 
 .service-list:hover {
-    height: auto;
-    min-height: 500px;
-    max-height: none;
+    height: 580px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     overflow-y: visible;
 }
@@ -397,16 +407,20 @@ color: #fff;
     overflow: visible;
 }
 
+.service-list:hover .service-image {
+    opacity: 1;
+}
+
 .more-content {
-    display: none;
-    transition: opacity 0.3s ease-in-out;
     opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    height: 0;
+    overflow: hidden;
 }
 
 .service-list:hover .more-content {
-    display: block;
     opacity: 1;
-    animation: fadeIn 0.5s;
+    height: auto;
 }
 
 @keyframes fadeIn {
@@ -1180,24 +1194,25 @@ border: 2px solid #7cc576;
 }
 
 .service-list-col2 hr {
+	order: 3;
     margin: 0 auto 15px;
     width: 50%;
     border-color: #1d7cbf;
 }
 
 #imgService {
-    width: 250px;
-    height: 180px;
+    width: 220px;
+    height: 160px;
     object-fit: cover;
     border-radius: 15px;
     border: none;
     transition: all 0.3s ease;
-    margin-top: 15px;
-    box-shadow: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #imgService:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .service-image {
@@ -1210,5 +1225,17 @@ border: 2px solid #7cc576;
 
 .service-list:hover .service-image {
     opacity: 1;
+}
+
+/* Media query para iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .service-list:hover {
+        height: 650px;
+    }
+    
+    #imgService {
+        width: 200px;
+        height: 150px;
+    }
 }
 
