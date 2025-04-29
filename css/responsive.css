@@ -12,6 +12,8 @@
 	.main-nav{ display:block !important; }
 	.main-nav li a { margin: 17px 15px; }
 	/*.portfolioContainer{ width:800px; margin:0px auto !important; } */ 
+	.responsive-gif { max-width: 800px; margin: 0 auto; display: block; }
+	.gif-background { text-align: center; display: flex; justify-content: center; align-items: center; }
 	
 }	
    
@@ -28,6 +30,8 @@
 	h2{ font-size:30px}
 	h6{ font-size:16px;}
 	h3{ font-size:15px;}
+	.responsive-gif { max-width: 600px; margin: 0 auto; display: block; }
+	.gif-background { text-align: center; display: flex; justify-content: center; align-items: center; width: 100%; margin-left: auto; margin-right: auto; }
 	
 	/* Corrección específica para el grid de Bootstrap en iPad */
 	.container .row {
@@ -105,6 +109,8 @@
 	.we-create li{ font-size:13px; padding:0 0 0 8px;}
 	.header h1{ font-size:28px;}
 	.header{ padding:0; height:100vh; display:flex; align-items:center; }
+	.responsive-gif { max-width: 100%; margin: 0 auto; display: block; }
+	.gif-background { margin-bottom: 20px; text-align: center; display: flex; justify-content: center; align-items: center; }
 	.main-section{ padding:60px 0 70px;}
 	.main-nav{ display:none; position:absolute; left:0; width:100%; top:74px; margin:0 auto; float: none; background:#fff; z-index: 1000; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
 	.main-nav li{ display:block; margin: 0; border-bottom: 1px solid #f1f1f1; }
@@ -157,6 +163,19 @@
 }
 
 @media (max-width: 768px) {
+    .gif-background {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .responsive-gif {
+        margin: 0 auto;
+        display: block;
+    }
+    
     .service-list {
         height: 350px;
         min-height: unset;
