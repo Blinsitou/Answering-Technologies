@@ -301,38 +301,33 @@ color: #fff;
     display: block;
 }
 
-.service-list {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 25px;
-    border-radius: 10px;
-    height: 280px;
-    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 20px;
-}
-
 .service-list-col2 {
-    flex: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .service-list-col2 h3 {
-	font-weight: bold;
-    margin-top: 0;
-    text-align: center;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
     order: 1;
-    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.service-image {
+    order: 2;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.service-list-col2 hr {
+    order: 3;
+    margin: 0 auto 15px;
+    width: 50%;
+    border-color: #1d7cbf;
+    display: block;
+    text-align: center;
 }
 
 .service-list-col2 h3 span {
@@ -361,24 +356,32 @@ color: #fff;
     font-weight: 600;
 }
 
-.service-image {
+.service-content {
+    max-height: 6.4em; /* Aproximadamente 4 líneas de texto */
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    line-height: 1.6em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    order: 4;
     width: 100%;
-    text-align: center;
-    margin: 0 0 15px 0;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-    order: 2;
+    padding: 5px 10px;
 }
 
-.service-content {
-    max-height: 80px;
+.service-list {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 280px;
+    height: auto;
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-    opacity: 1;
-    flex: 1;
-    width: 100%;
-    order: 3;
-    padding: 5px 10px;
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .row > [class*="col-"] {
@@ -393,13 +396,14 @@ color: #fff;
 }
 
 .service-list:hover {
-    height: 580px;
+    height: auto;
+    min-height: 280px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    overflow-y: visible;
 }
 
 .service-list:hover .service-content {
-    max-height: 1000px;
+    max-height: none;
+    -webkit-line-clamp: unset;
     overflow: visible;
 }
 
@@ -409,7 +413,7 @@ color: #fff;
 
 .more-content {
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
     height: 0;
     overflow: hidden;
 }
@@ -1196,13 +1200,6 @@ border: 2px solid #7cc576;
 	transform-origin: center center;
 }
 
-.service-list-col2 hr {
-	order: 3;
-    margin: 0 auto 15px;
-    width: 50%;
-    border-color: #1d7cbf;
-}
-
 #imgService {
     width: 220px;
     height: 160px;
@@ -1230,31 +1227,50 @@ border: 2px solid #7cc576;
     opacity: 1;
 }
 
-/* Media query para iPad */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .service-list:hover {
-        height: 650px;
+/* Media queries para diferentes tamaños de pantalla */
+@media only screen and (max-width: 1024px) {
+    .service-list {
+        min-height: 320px;
+    }
+    
+    .service-content {
+        max-height: 8em; /* Aproximadamente 4 líneas en tablet */
+        -webkit-line-clamp: 4;
     }
     
     #imgService {
-        width: 200px;
-        height: 150px;
+        max-width: 180px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .service-list {
+        min-height: 300px;
     }
     
-    .gif-background {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
+    .service-content {
+        max-height: 7.2em; /* Aproximadamente 4 líneas en móvil */
+        -webkit-line-clamp: 4;
     }
     
-    .responsive-gif {
-        max-width: 600px;
-        margin: 0 auto;
-        display: block;
+    #imgService {
+        max-width: 160px;
     }
+}
+
+@media only screen and (max-width: 480px) {
+    .service-list {
+        min-height: 280px;
     }
+    
+    .service-content {
+        max-height: 6.4em; /* Aproximadamente 4 líneas en móvil pequeño */
+        -webkit-line-clamp: 4;
+    }
+    
+    #imgService {
+        max-width: 140px;
+    }
+}
 
 
