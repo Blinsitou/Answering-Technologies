@@ -84,6 +84,11 @@ p{
 	line-height:24px;
 	margin:0;
 }
+
+.service-list .service-list-col2 .service-content p {
+    font-size: 13px; /* Reducir tamaño de fuente */
+    line-height: 1.6; /* Ajustar altura de línea */
+}
 .service-list-col2 hr {
 	border-top: 1px dashed #b0daed !important;
 	margin-bottom: 10px !important;
@@ -338,7 +343,6 @@ color: #fff;
 .service-list-col2 p {
 	hyphenate-limit-chars: 7;
 	hyphens: auto;
-	text-align: justify;
 	text-wrap: pretty;
     margin-bottom: 15px;
     line-height: 1.5;
@@ -1002,7 +1006,7 @@ border: 2px solid #7cc576;
 	border: 1px solid #7cc576;
 	outline:0;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);	
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
 }
 
