@@ -4,7 +4,7 @@ var colors = new Array(
     [145,255,101],
     [197,217,255]);
   var images = ['back7.jpg','back4.jpg','back5.jpg','back2.jpg', 'back6.jpg', 'back8.jpg'];
-  var texts = ['"Desarrollamos soluciones tecnológicas para todos tu entornos"', '"Buscamos que te sientas satisfecho con nuestro servicio"', '"Estamos seguros que juntos haremos un gran equipo de trabajo"', '"Con nuestros productos buscamos que obtengas buenos resultados"', '"Esperamos que te sientas a gusto con nuestro equipo"', '"Nuestro mayor deseo es lograr materializar tus ideas"'];
+  var texts = ['Desarrollamos soluciones tecnológicas para todos tu entornos', 'Buscamos que te sientas satisfecho con nuestro servicio', 'Estamos seguros que juntos haremos un gran equipo de trabajo', 'Con nuestros productos buscamos que obtengas buenos resultados', 'Esperamos que te sientas a gusto con nuestro equipo', 'Nuestro mayor deseo es lograr materializar tus ideas'];
   var positionSlide = 0;
   var step = 0;
   //color table indices for: 
