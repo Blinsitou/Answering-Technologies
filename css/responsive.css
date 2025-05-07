@@ -124,7 +124,7 @@
 		height: 130px !important;
 	}
 	
-	.we-create li{ font-size:13px; padding:0 0 0 8px;}
+	.we-create li{ font-size:18px; padding:0 0 0 8px;} /* Aumentado de 13px a 16px */
 	.header h1{ font-size:28px;}
 	.header{ padding:0; height:100vh; display:flex; align-items:center; }
 	.responsive-gif { max-width: 100%; margin: 0 auto; display: block; }
@@ -154,7 +154,7 @@
 	.main-section.contact{ padding:60px 0 70px}
 	.client-part-haead{ font-size:20px; line-height:30px;}
 	.link{ font-size:14px; padding:10px 25px;}
-	.logo{ width:100px;}
+	.logo{ width:250px;}
 	.main-section.contact{ background-size:contain;}
 	.Portfolio-nav li a{ padding:5px 16px;}
 	.Portfolio-nav li{ display:block;}
