@@ -10,7 +10,6 @@
 	.c-logo-part ul li{ margin:0 15px;}
 	.form{ margin:0 0 0 20px}
 	.main-nav{ display:block !important; }
-	.main-nav li a { margin: 17px 15px; }
 	/*.portfolioContainer{ width:800px; margin:0px auto !important; } */ 
 	.responsive-gif { max-width: 800px; margin: 0 auto; display: block; }
 	.gif-background { text-align: center; display: flex; justify-content: center; align-items: center; }

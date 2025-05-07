@@ -501,9 +501,19 @@
         $('.res-nav_click').click(function(){
             $('.main-nav').slideToggle();
             return false    
-            
         });
-        
+
+        // Controlar la aparición del logo pequeño
+        $(window).scroll(function() {
+            var scrollPosition = $(window).scrollTop();
+            var headerHeight = $('.header').height();
+            
+            if (scrollPosition > headerHeight) {
+                $('.main-nav-outer').addClass('visible');
+            } else {
+                $('.main-nav-outer').removeClass('visible');
+            }
+        });
     });
 </script>
 
