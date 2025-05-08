@@ -31,3 +31,7 @@
 .figure{ margin:0px;}
 
 img{ max-width:100%;}
+
+.main-section {
+    padding: 55px 0 110px !important;
+}
