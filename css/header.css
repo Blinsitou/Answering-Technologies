@@ -46,7 +46,7 @@
 	letter-spacing: -1px;
 	margin:0 0 22px 0 ;
 	color:#fff;
-	text-shadow: 2px 2px grey;
+	text-shadow: 2px 2px rgb(119, 119, 119);
 }
 
 /* Styles for the 'we-create' list in the header */
@@ -62,7 +62,7 @@
 	display:inline-block;
 	font-family: 'Montserrat',sans-serif;
 	font-size:20px;
-	color: #777777;
+	color: #000000;
 	font-weight: 400;
 	margin:0 5px 0 0;
 	padding:0 0 0 15px;
@@ -79,7 +79,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	border:2px solid white;
-	text-shadow: 1px 1px grey;
+	text-shadow: 1px 1px rgb(77, 77, 77);
 	margin-top: 32px;
 	border-radius: 62.4375em;
 }
@@ -94,6 +94,8 @@
 /* Styles for the message (id: msjs) in the header */
 #msjs{
 	font-style: italic;
+	font-family: Poppins, sans-serif;
+	color: #ffffff;
 }
 
 /* Styles for the 'start-button' (though commented out in HTML, styles might exist) */
