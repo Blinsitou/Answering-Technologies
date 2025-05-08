@@ -318,7 +318,54 @@ color: #fff;
     display: none;
 }
 
-@media only screen and (max-width: 991px) {
+/* Estilos específicos para tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-nav-outer .container {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    .main-nav-outer.visible .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: none;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav {
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .main-nav li {
+        margin: 0 10px;
+    }
+
+    .main-nav-outer.visible .main-nav li {
+        margin: 0 15px;
+    }
+
+    .main-nav li a {
+        font-size: 13px;
+        padding: 5px 8px;
+    }
+
+    /* Ocultar el logo pequeño en tablets */
+    .main-nav .small-logo {
+        display: none;
+    }
+
+    /* Ajustar los márgenes de los elementos del menú */
+    .main-nav li:not(.small-logo) {
+        margin: 0 8px;
+    }
+}
+
+/* Estilos para móviles */
+@media only screen and (max-width: 767px) {
     .main-nav-outer .container {
         max-width: 100%;
         display: flex;
@@ -327,15 +374,19 @@ color: #fff;
     }
 
     .main-nav-outer.visible .container {
-        border-radius: 0;
-        border: none;
-        background: transparent;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: none;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .main-nav {
         display: none;
         padding: 0;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         width: 100%;
@@ -359,12 +410,26 @@ color: #fff;
         display: block;
         margin: 0;
         padding: 10px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-nav li:last-child {
+        border-bottom: none;
     }
     
     .main-nav .small-logo {
         margin: 10px 0;
         width: auto;
+    }
+
+    .main-nav li a {
+        color: #333;
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .main-nav li a:hover {
+        background: rgba(74, 137, 220, 0.1);
     }
 }
 
@@ -491,16 +556,6 @@ color: #fff;
     padding: 5px 10px;
     position: relative;
     cursor: pointer;
-}
-
-.service-content:hover {
-    max-height: 50em; /* Large value to accommodate content */
-    -webkit-line-clamp: unset;
-    overflow: visible;
-}
-
-.service-content:hover ~ .service-image {
-    opacity: 1;
 }
 
 .service-content:hover {
