@@ -37,12 +37,12 @@
     right: 0;
     width: 100%;
     z-index: 9999;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.05); /* Un fondo sutil para mejorar la legibilidad inicial */
     transition: all 0.3s ease;
 }
 
 .main-nav-outer.visible {
-    background: transparent;
+    background: transparent; /* Vuelve a ser transparente para que el estilo del contenedor .visible tome el control */
 }
 
 .main-nav-outer .container {
@@ -78,7 +78,7 @@
 /* Styles for main navigation list items */
 .main-nav li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 30px; 
     transition: all 0.3s ease;
 }
 
