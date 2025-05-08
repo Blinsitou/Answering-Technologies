@@ -1,0 +1,106 @@
+/* Styles for the main header container */
+
+.header{
+	position: relative;
+	text-align:center;
+	background:url(../img/back2.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	transition: 1s;
+	-moz-transition:all 1s ease-in-out;
+	-webkit-transition:all 1s ease-in-out;
+}
+/* Styles for the header pattern overlay */
+.header_pattern { 
+	position: absolute; 
+	opacity: 0.8;
+	right: 0px; 
+	top: 0px; 
+	left:0;
+	width: 100%; 
+	height: 100%; 
+    content: '';
+}
+/* Styles for the container within the header */
+.header .container {
+	width: 100%;
+	z-index: 1;
+	position: relative;
+}
+/* Styles for the logo in the header */
+.logo{
+	width:500px;
+	margin:0 auto;
+}
+/* Styles for the main heading (h1) in the header */
+.header h1{
+	font-family: 'Montserrat',sans-serif;
+	font-size:50px;
+	font-weight:400;
+	letter-spacing: -1px;
+	margin:0 0 22px 0 ;
+	color:#fff;
+	text-shadow: 2px 2px grey;
+}
+
+/* Styles for the 'we-create' list in the header */
+.we-create{
+	padding:0;
+	margin:0px 0 55px;
+}
+/* Styles for the 'wp-pic' element (likely an image) in the header */
+.wp-pic{
+	margin-bottom:20px;
+}
+.we-create li{
+	display:inline-block;
+	font-family: 'Montserrat',sans-serif;
+	font-size:20px;
+	color: #777777;
+	font-weight: 400;
+	margin:0 5px 0 0;
+	padding:0 0 0 15px;
+}
+.we-create li:first-child{
+	background:none;
+}
+
+/* Styles for the 'CONOCENOS' button (id: button-more) in the header */
+#button-more{
+	width: 80%;
+	background-color: #61b5ff;
+	color:white;
+	font-size: 16px;
+	font-weight: bold;
+	border:2px solid white;
+	text-shadow: 1px 1px grey;
+	margin-top: 32px;
+	border-radius: 62.4375em;
+}
+
+#button-more:hover{
+	background-color: #99cfff;
+  	transition: all .5s;
+  	-moz-transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+}
+
+/* Styles for the message (id: msjs) in the header */
+#msjs{
+	font-style: italic;
+}
+
+/* Styles for the 'start-button' (though commented out in HTML, styles might exist) */
+.start-button {
+	padding-left: 0px;
+}
+
+.start-button li a{
+color: #fff;
+}

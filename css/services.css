@@ -1,0 +1,201 @@
+.service-list-col1 {
+    text-align: center;
+}
+
+/* Styles for icons in the first column of a service list item */
+.service-list-col1 i {
+    font-size: 40px;
+    color: #6b6b6b;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Styles for the second column in a service list item (content container) */
+.service-list-col2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Styles for h3 headings in the second column of a service list item */
+.service-list-col2 h3 {
+    order: 1;
+    margin-bottom: 15px;
+}
+
+/* Styles for the image container within a service item */
+.service-image {
+    order: 2;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.service-list-col2 hr {
+    order: 3;
+    margin: 0 auto 15px;
+    width: 50%;
+    border-color: #1d7cbf;
+    display: block;
+    text-align: center;
+}
+
+.service-list-col2 h3 span {
+    display: block;
+    text-align: center;
+}
+
+.service-list-col2 p {
+	hyphenate-limit-chars: 7;
+	hyphens: auto;
+	text-wrap: pretty;
+    margin-bottom: 15px;
+    line-height: 1.5;
+	letter-spacing: 0,5px;
+	line-height: 1,6px;
+	padding: 10px 15px;
+}
+
+.service-list-col2 p strong {
+	hyphenate-limit-chars: 7;
+	hyphens: auto;
+	text-align: justify;
+	text-wrap: pretty;
+    color: #292d30;
+    font-weight: 600;
+}
+
+/* Styles for the service list item container */
+.service-list {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 280px;
+    height: auto;
+    transition: box-shadow 0.3s ease; /* Apply transition only to box-shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.service-list::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #1d7cbf;
+    transition: transform 0.3s ease, border-top-color 0.3s ease; /* Specific transitions for hover effect */
+    opacity: 1;
+}
+
+.service-list:hover::after {
+    border-top-color: #7bb351;
+    transform: translateX(-50%) translateY(2px);
+}
+
+/* Removed redundant rules previously added */
+
+.service-content {
+    max-height: 6.4em; /* Corresponds to 4 lines * 1.6em line-height */
+    overflow: hidden;
+    transition: max-height 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transition for expansion */
+    line-height: 1.6em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    order: 4;
+    width: 100%;
+    padding: 5px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-content:hover {
+    max-height: 50em; /* Large value to accommodate content */
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+.service-content:hover ~ /* Styles for the image container within a service item */
+.service-image {
+    opacity: 1;
+}
+
+.service-list:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-list:hover::after {
+    border-top-color: #7bb351;
+    transform: translateX(-50%) translateY(2px);
+}
+
+/* Removed redundant rules previously added */
+
+.row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.row > [class*="col-"] > /* Styles for the service list item container */
+.service-list {
+    flex: 1;
+}
+
+.more-content {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    height: 0;
+    overflow: hidden;
+}
+
+.service-list:hover .more-content {
+    opacity: 1;
+    height: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#imgService {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#imgService:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the image container within a service item */
+.service-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.service-list:hover /* Styles for the image container within a service item */
+.service-image {
+    opacity: 1;
+}

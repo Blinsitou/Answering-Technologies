@@ -1,0 +1,112 @@
+/* Styles for the main client section container */
+.client-part{
+	margin-bottom: 260px;
+	background:url(../img/bogota-op.png) center center no-repeat;
+	background-size: cover;
+	padding:80px 0;
+	text-align:center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* Styles for the head/title of the client section */
+.client-part-haead{
+	color:#fdfdfd;
+	font-size:28px;
+	line-height:41px;
+	margin:30px 0 10px;
+	font-family: ''Open Sans',sans-serif';
+	font-style: italic;
+}
+/* Styles for the list of clients/testimonials */
+.client{
+	padding:0;
+	margin:60px 0 0;
+	list-style:none;
+	text-align:center;
+}
+.autor-cita {
+	color:white;
+	float: right;
+}
+.client li{
+	display:inline;
+	margin:10px 0px;
+	padding: 10px 5px;
+	border: 1px solid white;
+	box-shadow: 2px 2px rgba(58, 57, 57, 0.52);
+	transition: .5s;
+}
+.client li:hover{
+	background-color: #7bc476;
+	background-position: 0 -100%;
+	-ms-transform: translate(0px, -10px); /* IE 9 */
+    -webkit-transform: translate(0px, -10px); /* Safari */
+    transform: translate(0px, -10px);
+    transition: .3s;
+    -moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+.client li hr{
+	margin:3px;
+}
+.client li a{
+	display:block;
+}
+.client li a img{
+	margin-bottom:10px;
+	/*border-radius:50%;*/
+}
+.client li a:hover{
+	text-decoration:none;
+}
+.client li a h3{
+	color:#ffffff;
+}
+.client li a span{
+	color:#f1f1f1;
+}
+/* Styles for the quote icon in the client section */
+.quote-right{
+	font-style:normal;
+	width: 100px;
+	height: 100px;
+	margin:0 auto;
+	border:2px solid white;
+	border-radius:50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size:36px;
+	color:white;
+	cursor: pointer;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.quote-right:hover{
+color: #7cc576;
+border: 2px solid #7cc576;
+}
+
+/* Styles for the client logo part (likely a band of client logos) */
+.c-logo-part{
+	background:#7cc576;
+	padding:25px 0;
+    filter: alpha(opacity=60);
+}
+.c-logo-part ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-align:center;
+}
+.c-logo-part ul li{
+	display:inline;
+	margin:0 25px;
+}
+.c-logo-part ul a{
+	display:inline-block;
+	margin: 0 20px;
+}
