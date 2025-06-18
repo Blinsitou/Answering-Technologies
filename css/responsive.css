@@ -424,7 +424,7 @@
 
 .service-content {
 	max-height: 6.4em; 
-	-webkit-line-clamp: 4;
+	line-clamp: 4;
 }
 
 /* Styles for service images*/
