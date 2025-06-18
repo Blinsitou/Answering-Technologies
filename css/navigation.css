@@ -103,15 +103,6 @@
     margin: 0 12px;
 }
 
-/* Asegurar que el logo tenga un margen adecuado */
-.main-nav .small-logo {
-    margin: 0 25px !important; 
-}
-
-.main-nav-outer.visible .small-logo {
-    margin: 0 15px !important; 
-}
-
 /* Styles for main navigation links */
 .main-nav li a {
     color: #000000;
@@ -125,19 +116,23 @@
     white-space: nowrap;
 }
 
-.main-nav li a:hover {
-    color: #4a89dc;
-    background: rgba(74, 137, 220, 0.1);
+.main-nav li:not(.small-logo) a:hover {
+    color: #ffffff; 
+    background-color: #2c5aa0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 /* Styles for the small logo within the navigation */
 .main-nav .small-logo {
-    margin: 0;
+    margin: 0 25px;
     opacity: 0;
     visibility: hidden;
     width: 0;
     transform: translateY(-10px);
-    transition: all 0.4s ease;
+    transition: all 0.4s ease, margin 0.4s ease, opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 .main-nav-outer.visible .small-logo {
@@ -146,7 +141,6 @@
     width: auto;
     margin: 0 15px;
     transform: translateY(0);
-    flex-shrink: 0;
 }
 
 .main-nav .small-logo img {
