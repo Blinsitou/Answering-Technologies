@@ -6,7 +6,7 @@
 	background:url(../img/back2.jpg);
 	background-size: cover;
 	background-position: center;
-	padding: 0;
+	padding: 70px 0 0; /* Add top padding to prevent overlap with navbar */
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -30,13 +30,16 @@
 /* Styles for the container within the header */
 .header .container {
 	width: 100%;
-	z-index: 1;
+	z-index: 2; /* Increase z-index but keep below navbar */
 	position: relative;
+	padding-top: 30px; /* Add more spacing at the top */
 }
 /* Styles for the logo in the header */
 .logo{
 	width:500px;
-	margin:0 auto;
+	margin:30px auto 0; /* Add more top margin */
+	position: relative;
+	z-index: 2; /* Higher than container but below navbar */
 }
 /* Styles for the main heading (h1) in the header */
 .header h1{
