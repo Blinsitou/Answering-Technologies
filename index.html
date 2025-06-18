@@ -502,10 +502,8 @@
             return false    
         });
         
-        // Controlar la aparición del logo pequeño
         $(window).scroll(function() {
             var scrollPosition = $(window).scrollTop();
-            // Cambiar el estilo apenas se haga scroll
             if (scrollPosition > 10) {
                 $('.main-nav-outer').addClass('visible');
             } else {
@@ -513,7 +511,6 @@
             }
         });
         
-        // Asegurarse de que el navbar tenga la clase 'visible' al cargar si ya se ha hecho scroll
         if ($(window).scrollTop() > 10) {
             $('.main-nav-outer').addClass('visible');
         }
