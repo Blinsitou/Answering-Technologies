@@ -259,15 +259,14 @@
 .main-nav {
         display: none;
         padding: 0;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
         width: 100%;
         position: absolute;
         top: 100%;
         left: 0;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         border-top: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     /* Styles for the responsive navigation toggle button */
@@ -278,6 +277,11 @@
         font-size: 24px;
         cursor: pointer;
         padding: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .res-nav_click:hover {
+        color: #4a89dc; /* Azul para el hover */
     }
     
     /* Styles for main navigation list items */
@@ -292,21 +296,22 @@
         border-bottom: none;
     }
     
-    /* Styles for the small logo within the navigation */
-.main-nav .small-logo {
-        margin: 10px 0;
-        width: auto;
+    /* Ocultar el logo en el menú hamburguesa */
+    .main-nav .small-logo {
+        display: none;
     }
 
     /* Styles for main navigation links */
 .main-nav li a {
         color: #333;
         display: block;
-        padding: 10px 20px;
+        padding: 12px 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .main-nav li a:hover {
         background: rgba(74, 137, 220, 0.1);
+        color: #4a89dc;
     }	
 }
 

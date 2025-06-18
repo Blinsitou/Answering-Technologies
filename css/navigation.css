@@ -36,14 +36,13 @@
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 9999; /* Increased z-index to ensure it stays on top */
+    z-index: 9999; 
     transition: all 0.3s ease;
-    padding-top: 10px; /* Add some padding on top */
-    padding-bottom: 10px; /* Add some padding on bottom */
+    padding-bottom: 10px; 
 }
 
 .main-nav-outer.visible {
-    background: transparent; /* Vuelve a ser transparente para que el estilo del contenedor .visible tome el control */
+    background: transparent;
 }
 
 .main-nav-outer .container {
@@ -56,8 +55,7 @@
 
 .main-nav-outer.visible .container {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* Se eliminó el efecto blur */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-top: none;
     border-radius: 0 0 15px 15px;
@@ -85,7 +83,7 @@
     white-space: nowrap;
 }
 
-.main-nav-outer.visible /* Styles for main navigation list items */
+.main-nav-outer.visible 
 .main-nav li {
     margin: 0 20px;
 }
@@ -129,11 +127,21 @@
 .main-nav .small-logo img {
     height: 35px;
     width: auto;
+    min-width: 180px;
     transition: all 0.3s ease;
-    max-width: 120px;
+    object-fit: contain;
 }
 
 /* Styles for the responsive navigation toggle button */
 .res-nav_click {
     display: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.res-nav_click:hover {
+    color: #4a89dc; /* Azul para el hover */
 }

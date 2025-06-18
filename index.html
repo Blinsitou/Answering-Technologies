@@ -298,7 +298,7 @@
                     <p>Desarrollamos agentes de inteligencia artificial para optimizar operaciones empresariales, reducir costos y mejorar la eficiencia.</p>
                 </div>
                 <div class="Portfolio-box printdesign">
-                	<a href="#"><img src="img/subsidio.jpg" alt="" class="product-img"></a>	
+                	<a href="#"><img src="img/fiduapoyo.jpg" alt="" class="product-img"></a>	
                 	<h3>Sistemas de Administración de Subsidios y Beneficios Económicos</h3>
                     <p>Plataformas diseñadas para gestionar subsidios y recursos financieros, asegurando un flujo de aprobación estructurado y métricas en tiempo real.</p>
                 </div>
@@ -507,14 +507,18 @@
         // Controlar la aparición del logo pequeño
         $(window).scroll(function() {
             var scrollPosition = $(window).scrollTop();
-            var headerHeight = $('.header').height();
-            
-            if (scrollPosition > headerHeight) {
+            // Cambiar el estilo apenas se haga scroll
+            if (scrollPosition > 10) {
                 $('.main-nav-outer').addClass('visible');
             } else {
                 $('.main-nav-outer').removeClass('visible');
             }
         });
+        
+        // Asegurarse de que el navbar tenga la clase 'visible' al cargar si ya se ha hecho scroll
+        if ($(window).scrollTop() > 10) {
+            $('.main-nav-outer').addClass('visible');
+        }
     });
 </script>
 
