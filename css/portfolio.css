@@ -61,12 +61,14 @@
 }
 
 /* Styles for product images within portfolio boxes */
-.product-/* General image rule, ensure it's not overly broad or reset if intended for portfolio only */
-img {
-    width: 100%;
-    height: 200px;
+.Portfolio-box .product-img {
+    width: 250px;
+    height: 180px;
     object-fit: contain;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Portfolio-box img:hover {

@@ -1,4 +1,4 @@
-/* Styles for general links, possibly used in navigation or elsewhere */
+/* Styles for general links*/
 .link{
 	padding:15px 35px;
 	background:#7cc576;
@@ -74,13 +74,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 /* Styles for main navigation list items */
 .main-nav li {
     display: inline-block;
-    margin: 0 30px; 
+    margin: 0 10px; 
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .main-nav-outer.visible /* Styles for main navigation list items */
@@ -119,14 +121,16 @@
     opacity: 1;
     visibility: visible;
     width: auto;
-    margin: 0 30px;
+    margin: 0 15px;
     transform: translateY(0);
+    flex-shrink: 0;
 }
 
-.main-nav .small-logo /* General image rule, ensure it's not overly broad or reset if intended for portfolio only */
-img {
-    height: 40px;
+.main-nav .small-logo img {
+    height: 35px;
+    width: auto;
     transition: all 0.3s ease;
+    max-width: 120px;
 }
 
 /* Styles for the responsive navigation toggle button */
