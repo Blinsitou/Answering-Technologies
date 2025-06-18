@@ -9,7 +9,7 @@
     
     .service-content {
         max-height: 8em; 
-        -webkit-line-clamp: 4;
+        line-clamp: 4;
     }
     
     /* Styles for service images (id: imgService) */
@@ -106,13 +106,13 @@
 	
 	.service-content {
 		max-height: 8em !important;
-		-webkit-line-clamp: 4 !important;
+		line-clamp: 4 !important;
 		overflow: hidden;
 	}
 	
 	.service-list:hover .service-content {
 		max-height: none !important;
-		-webkit-line-clamp: unset !important;
+		line-clamp: unset !important;
 	}
 	
 	.service-image {
@@ -195,13 +195,13 @@
 	
 	.service-content {
 		max-height: 7.2em !important;
-		-webkit-line-clamp: 4 !important;
+		line-clamp: 4 !important;
 		overflow: hidden;
 	}
 	
 	.service-list:hover .service-content {
 		max-height: none !important;
-		-webkit-line-clamp: unset !important;
+		line-clamp: unset !important;
 	}
 	
 	.service-image {
@@ -249,7 +249,7 @@
 
 .service-content {
 	max-height: 7.2em;
-	-webkit-line-clamp: 4;
+	line-clamp: 4;
 }
 
 /* Styles for service images (id: imgService) */
@@ -355,13 +355,13 @@
 	
 	.service-content {
 		max-height: 6.4em !important;
-		-webkit-line-clamp: 4 !important;
+		line-clamp: 4 !important;
 		overflow: hidden;
 	}
 	
 	.service-list:hover .service-content {
 		max-height: none !important;
-		-webkit-line-clamp: unset !important;
+		line-clamp: unset !important;
 	}
 	
 	.service-image {
