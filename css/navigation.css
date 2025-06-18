@@ -53,13 +53,28 @@
     position: relative;
 }
 
-.main-nav-outer.visible .container {
-    background: rgba(255, 255, 255, 0.1);
-    /* Se eliminó el efecto blur */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-top: none;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Efecto blur solo para pantallas grandes y medianas */
+@media (min-width: 768px) {
+    .main-nav-outer.visible .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: none;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Para móviles (menos de 768px) */
+@media (max-width: 767px) {
+    .main-nav-outer.visible .container {
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: none;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* Styles for the main navigation list */
@@ -71,21 +86,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
 }
 
 /* Styles for main navigation list items */
 .main-nav li {
     display: inline-block;
-    margin: 0 10px; 
+    margin: 0 15px; 
     transition: all 0.3s ease;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.main-nav-outer.visible 
-.main-nav li {
-    margin: 0 20px;
+/* Espaciado reducido cuando el navbar está fijo */
+.main-nav-outer.visible .main-nav li {
+    margin: 0 12px;
+}
+
+/* Asegurar que el logo tenga un margen adecuado */
+.main-nav .small-logo {
+    margin: 0 25px !important; 
+}
+
+.main-nav-outer.visible .small-logo {
+    margin: 0 15px !important; 
 }
 
 /* Styles for main navigation links */
@@ -95,9 +119,10 @@
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 8px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .main-nav li a:hover {
@@ -127,7 +152,7 @@
 .main-nav .small-logo img {
     height: 35px;
     width: auto;
-    min-width: 180px;
+    max-width: 180px;
     transition: all 0.3s ease;
     object-fit: contain;
 }
@@ -143,5 +168,5 @@
 }
 
 .res-nav_click:hover {
-    color: #4a89dc; /* Azul para el hover */
+    color: #4a89dc; 
 }
